@@ -25,6 +25,7 @@ namespace infini
     CPU = 1
   };
 
+  //runtime 是运行时环境，存储通用设置，如设备类型
   class RuntimeObj : public std::enable_shared_from_this<RuntimeObj>
   {
   protected:

@@ -18,8 +18,12 @@ namespace infini
         Allocator allocator = Allocator(runtime);
         // allocate a->b->c
         size_t offsetA = allocator.alloc(a->getBytes());
+        std::cout << "offsetA:" << offsetA << std::endl;
         size_t offsetB = allocator.alloc(b->getBytes());
+        std::cout << "offsetB:" << offsetB << std::endl;
         size_t offsetC = allocator.alloc(c->getBytes());
+        std::cout << "offsetC:" << offsetC << std::endl;
+
         // free b, then allocate d
         allocator.free(offsetB, b->getBytes());
         size_t offsetD = allocator.alloc(d->getBytes());
